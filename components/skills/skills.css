@@ -1,0 +1,110 @@
+.skills {
+    padding: 80px 20px;
+    background-color: #000000;
+    position: relative;
+}
+
+.skills::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: pulse 7s ease-in-out infinite;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.skills-column {
+    background: rgba(139, 92, 246, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skills-column:hover {
+    background: rgba(139, 92, 246, 0.08);
+    border-color: rgba(139, 92, 246, 0.3);
+    box-shadow: 0 12px 48px 0 rgba(139, 92, 246, 0.25);
+}
+
+.skills-column .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--light-text);
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 18px;
+    color: var(--gray-text);
+    margin-bottom: 15px;
+    padding-left: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.skills-list li::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-orange) 0%, var(--purple-glow) 100%);
+    transition: width 0.3s ease;
+}
+
+.skills-list li:hover {
+    color: var(--accent-orange);
+    transform: translateX(20px);
+    text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+}
+
+.skills-list li:hover::before {
+    width: 15px;
+}
+
+.level {
+    font-size: 14px;
+    color: var(--gray-text);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .skills-column {
+        padding: 30px;
+    }
+    
+    .skills::before {
+        width: 400px;
+        height: 400px;
+    }
+}

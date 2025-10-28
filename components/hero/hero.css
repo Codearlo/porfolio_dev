@@ -1,0 +1,116 @@
+.hero {
+    min-height: 100vh;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: float 8s ease-in-out infinite;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(109, 40, 217, 0.25) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(70px);
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(30px, -30px);
+    }
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-updated {
+    font-size: 14px;
+    color: var(--gray-text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: clamp(60px, 15vw, 180px);
+    font-weight: 900;
+    letter-spacing: -5px;
+    color: var(--light-text);
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin: 20px 0;
+    text-shadow: 
+        3px 3px 0px rgba(255, 107, 53, 0.3),
+        0 0 40px rgba(139, 92, 246, 0.4);
+}
+
+.hero-year {
+    display: inline-block;
+    background-color: var(--accent-orange);
+    color: #000000;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+}
+
+.hero-subtitle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    font-size: 14px;
+    color: var(--gray-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 80vh;
+    }
+
+    .hero-subtitle {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .hero-title {
+        letter-spacing: -3px;
+    }
+    
+    .hero::before,
+    .hero::after {
+        width: 250px;
+        height: 250px;
+    }
+}
