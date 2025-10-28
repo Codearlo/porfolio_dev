@@ -11,7 +11,7 @@
     right: 5%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(90px);
     animation: pulse 6s ease-in-out infinite;
@@ -45,7 +45,7 @@
     width: 100%;
     border-radius: 20px;
     box-shadow: 
-        0 10px 30px rgba(255, 107, 53, 0.2),
+        0 10px 30px rgba(139, 92, 246, 0.2),
         0 0 40px rgba(139, 92, 246, 0.3);
 }
 
@@ -75,8 +75,8 @@
 }
 
 .highlight {
-    color: var(--accent-orange);
-    text-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
+    color: var(--purple-glow);
+    text-shadow: 0 0 15px rgba(139, 92, 246, 0.5);
 }
 
 .about-contact {
@@ -103,12 +103,12 @@
 }
 
 .contact-btn:hover {
-    background: rgba(139, 92, 246, 0.2);
-    border-color: var(--accent-orange);
+    background: rgba(139, 92, 246, 0.3);
+    border-color: var(--purple-glow);
     transform: translateY(-2px);
     box-shadow: 
         0 8px 25px rgba(139, 92, 246, 0.4),
-        0 0 20px rgba(255, 107, 53, 0.3);
+        0 0 20px rgba(139, 92, 246, 0.5);
 }
 
 @media (max-width: 768px) {

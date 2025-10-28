@@ -3,9 +3,18 @@ function loadHero() {
         .then(response => response.text())
         .then(html => {
             document.getElementById('hero-section').innerHTML = html;
+            updateCurrentYear();
             animateHero();
         })
         .catch(error => console.error('Error loading hero:', error));
+}
+
+function updateCurrentYear() {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        const currentYear = new Date().getFullYear();
+        yearElement.textContent = currentYear;
+    }
 }
 
 function animateHero() {

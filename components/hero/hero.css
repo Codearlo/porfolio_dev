@@ -15,7 +15,7 @@
     left: 10%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.12) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(80px);
     animation: float 8s ease-in-out infinite;
@@ -28,7 +28,7 @@
     right: 10%;
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, rgba(109, 40, 217, 0.25) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(109, 40, 217, 0.1) 0%, transparent 70%);
     border-radius: 50%;
     filter: blur(70px);
     animation: float 10s ease-in-out infinite reverse;
@@ -67,20 +67,20 @@
     text-transform: uppercase;
     margin: 20px 0;
     text-shadow: 
-        3px 3px 0px rgba(255, 107, 53, 0.3),
-        0 0 40px rgba(139, 92, 246, 0.4);
+        3px 3px 0px rgba(139, 92, 246, 0.15),
+        0 0 40px rgba(139, 92, 246, 0.2);
 }
 
 .hero-year {
     display: inline-block;
-    background-color: var(--accent-orange);
-    color: #000000;
+    background: linear-gradient(135deg, var(--purple-glow) 0%, var(--purple-dark) 100%);
+    color: #ffffff;
     padding: 8px 20px;
     border-radius: 25px;
     font-weight: bold;
     font-size: 18px;
     margin: 20px 0;
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
 }
 
 .hero-subtitle {
